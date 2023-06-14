@@ -12,6 +12,19 @@ const BookList = () => {
   const editPage = (id) => {
     navigate("./edit/" + id);
   };
+
+  const deletePage = (id) => {
+    // console.log(id);
+    fetch("http://localhost:8000/books/" + id, {
+      method: "DELETE",
+    })
+      .then((res) => {
+        window.location.reload();
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
   // console.log(bookData[0]);
   useEffect(() => {
     fetch("http://localhost:8000/books")
@@ -66,9 +79,14 @@ const BookList = () => {
                     >
                       Edit
                     </a>
-                    <Link to="/delete" className="btn btn-danger">
+                    <a
+                      onClick={() => {
+                        deletePage(item.id);
+                      }}
+                      className="btn btn-danger"
+                    >
                       Delete
-                    </Link>
+                    </a>
                     <a
                       onClick={() => {
                         viewPage(item.id);

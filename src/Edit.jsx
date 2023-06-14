@@ -5,22 +5,24 @@ const Edit = () => {
   const [title, setTitle] = useState();
   const [author, setAuthor] = useState();
   const [isActive, setIsActive] = useState();
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
   const { id } = useParams();
-  //   e.preventDefault();
-  //  const data = { id, title, author };
-  console.log(isActive);
+
   const submitHandler = (e) => {
     e.preventDefault();
     const updatedData = { id, title, author, isActive };
 
     fetch("http://localhost:8000/books/" + id, {
-      method: "POST",
+      method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(updatedData),
-    }).catch((err) => {
-      console.log(err.message);
-    });
+    })
+      .then((res) => {
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
     //  console.log(updatedData);
   };
   useEffect(() => {

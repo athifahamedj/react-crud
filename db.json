@@ -1,28 +1,16 @@
 {
   "books": [
     {
-      "id": 1,
-      "title": "Old man and sea",
-      "author": "Ernest hemingway"
-    },
-    {
+      "id": 2,
       "title": "Crime and punishment",
-      "author": "doestovsky",
-      "id": 2
+      "author": "Doestovsky",
+      "isActive": true
     },
     {
-      "title": "test",
-      "author": "test",
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "title": "War and peace",
-      "author": "Leo Tolstoy",
-      "isActive": true,
-      "id": 5
+      "id": 3,
+      "title": "The 48 Laws of Power",
+      "author": "Robert Greene",
+      "isActive": true
     }
   ]
 }
