@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Old man and sea",
+      "author": "Ernest hemingway"
+    },
+    {
+      "title": "Crime and punishment",
+      "author": "doestovsky",
+      "id": 2
+    },
+    {
+      "title": "test",
+      "author": "test",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "title": "War and peace",
+      "author": "Leo Tolstoy",
+      "isActive": true,
+      "id": 5
+    }
+  ]
+}
