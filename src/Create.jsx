@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useId } from "react";
 import { useNavigate } from "react-router-dom";
 const Create = () => {
+  const { ID } = useId();
   const [id, setId] = useState();
   const [title, setTitle] = useState();
+
   const [author, setAuthor] = useState();
   const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
@@ -28,10 +30,11 @@ const Create = () => {
         <div className="col-md-4 form">
           <form onSubmit={submitHandler}>
             <div className="form-group">
-              <label className="mb-1" htmlFor="title">
+              <label className="mb-1" htmlFor={"title-" + ID}>
                 ID
               </label>
               <input
+                id={"title-" + ID}
                 type="text"
                 className="form-control"
                 disabled="disabled"
@@ -40,10 +43,11 @@ const Create = () => {
             </div>
 
             <div className="form-group">
-              <label className="mb-1" htmlFor="title">
+              <label className="mb-1" htmlFor={"title-" + ID}>
                 Title
               </label>
               <input
+                id={"title-" + ID}
                 type="text"
                 className="form-control"
                 placeholder="Enter Title"
@@ -53,10 +57,11 @@ const Create = () => {
               />
             </div>
             <div className="form-group">
-              <label className="mb-1" htmlFor="author">
+              <label className="mb-1" htmlFor={"title-" + ID}>
                 Author
               </label>
               <input
+                id={"title-" + ID}
                 type="text"
                 className="form-control"
                 placeholder="Enter author"
