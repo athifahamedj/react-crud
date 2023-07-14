@@ -105,7 +105,6 @@ const Edit = () => {
                 Active/In Active
               </label>
             </div>
-
             <button className="mt-2 btn btn-success">Submit</button>
           </form>
         </div>
